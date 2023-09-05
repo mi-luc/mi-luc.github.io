@@ -1,0 +1,18 @@
+function changePage()
+{
+    var id=sessionStorage.getItem("id");
+    console.log(id);
+    //CHECK IF ADMIN 
+    //TO BE DONE WITH PHP
+    if(id==1)
+    {
+        window.location = "../html/addProblem.html";
+    }
+    else
+    {
+        window.location="../html/404.html";
+    }
+   
+   
+    
+}

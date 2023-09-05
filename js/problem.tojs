@@ -1,0 +1,9 @@
+
+
+function changePage(id)
+{
+    console.log(id);
+    sessionStorage.setItem('type',id);
+    window.location = "../html/problem.html";
+    
+}

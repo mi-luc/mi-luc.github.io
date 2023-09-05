@@ -1,0 +1,73 @@
+<html>
+
+<head>
+    <title>Adauga</title>
+    <link rel="icon" href="../res/C.png">
+    <link href="../css/solveMe.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+    <div class="container-fluid">
+        <a href="#" class="navbar-brand">Be sharp at coding...</a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse1">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse1">
+            <div class="navbar-nav">
+                <a href="./index.html" class="nav-item nav-link">Home</a>
+                <a href="./login.html" class="nav-item nav-link">Login</a>
+                <a href="./signup.html" class="nav-item nav-link">Signup</a>
+                <a href="./profile.html" class="nav-item nav-link" id="myName"></a>
+
+            </div>
+            <form class="d-flex ms-auto">
+                <input type="text" class="input-search" id="input-search">
+                <label class="search" for="input-search">
+                </label>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div class="container title" id="problemText">
+
+    <br><br>
+    <h1 style="text-align: center;" id="titlu"><textarea id="add"placeholder="Titlu :)"></textarea></h1><br>
+    <h3>Cerinta</h3>
+    <p id="textBox"><textarea id="add" placeholder="Se dau n numere..."></textarea></p>
+    <h3>Date de intrare</h3>
+    <p id="textBox"><textarea id="add" placeholder="Specificatii date intrare"></textarea></p>
+    <h3>Date de iesire</h3>
+    <p id="textBox"><textarea id="add" placeholder="Specificatii date iesire"></textarea></p>
+    <h3>Restrictii si precizari</h3>
+    <p id="textBox"><textarea id="add" placeholder="N>1000 si ..."></textarea>
+    </p>
+    <h3>Exemplu:</h3><code style="margin-left: 40px;">Intrare</code>
+    <div class="littleBox" id="exIN"><textarea id="add" placeholder="1 2 3 4 5"></textarea></div><br>
+    <code style="margin-left: 40px;">Iesire</code>
+    <div class="littleBox" id="exOUT"><textarea id="add" placeholder="10"></textarea></div>
+    <button id="add" type="submit">Adauga</button>
+
+</div>
+
+
+<script src="../js/addProblem.js"></script>
+
+<footer class="bg-secondary text-center text-lg-start">
+
+    <div class="text-center p-3">
+         Cea mai completa arhiva de probleme de programare!
+    </div>
+
+</footer>
+
+
+
+
+</html>

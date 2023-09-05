@@ -1,0 +1,127 @@
+// let probList = [
+//     {
+//       "title": "Test exercise",
+//       "text": "Acest exercitiu este un test pentru a verifica uploadarea fisierelor...",
+//       "date": new Date('2017-01-03'),
+//       "id": 0,
+//       "in":"",
+//       "out":"",
+//       "clasa":9,
+//     },
+//     {
+//         "title": "Suma Gauss",
+//         "text": "Se citește n număr natural. Calculați suma numerelor naturale mai mici sau egale cu n.",
+//         "date": new Date('2017-01-03'),
+//         "id": 1,
+//         "in":"",
+//         "out":"",
+//         "clasa":9,
+//     },
+//     {
+//         "title": "SumaPare",
+//         "text": "Să se scrie un program care citește numărul natural n și determină suma 2+4+..+(2n).",
+//         "date": new Date('2017-01-03'),
+//         "id": 2,
+//         "in":"",
+//         "out":"",
+//         "clasa":9,
+//     },
+//     {
+//         "title": "Factorial",
+//         "text": "Să se scrie un program care citește numărul natural n și determină valoarea lui n!=1*2*3*...*n.",
+//         "date": new Date('2017-01-03'),
+//         "id": 3,
+//         "in":"",
+//         "out":"",
+//         "clasa":9,
+//     },    
+//  ]
+// window.onload = function(){
+//     var innerList = document.getElementsByClassName('listProblems')[0];
+//     total="";
+//     probList.forEach(element => {
+        
+//         htmlCode="<div class=\"problem\" onclick=\"goToProblem(";
+//         htmlCode+=element.id;
+//         htmlCode+=")\"><h3 class=\"card__title\">";
+//         htmlCode+=element["title"];
+//         continuare=" </h3><p class=\"card__content\">";
+//         htmlCode+=continuare;
+//         htmlCode+=element["text"];
+//         continuare="</p><div class=\"card__date\">April 15, 2022</div><div class=\"card__arrow\">Solve<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" height=\"15\" width=\"15\"><path fill=\"#fff\" d=\"M13.4697 17.9697C13.1768 18.2626 13.1768 18.7374 13.4697 19.0303C13.7626 19.3232 14.2374 19.3232 14.5303 19.0303L20.3232 13.2374C21.0066 12.554 21.0066 11.446 20.3232 10.7626L14.5303 4.96967C14.2374 4.67678 13.7626 4.67678 13.4697 4.96967C13.1768 5.26256 13.1768 5.73744 13.4697 6.03033L18.6893 11.25H4C3.58579 11.25 3.25 11.5858 3.25 12C3.25 12.4142 3.58579 12.75 4 12.75H18.6893L13.4697 17.9697Z\"></path></svg></div></div>"
+//         htmlCode+=continuare;
+//         total+=htmlCode;
+//     });
+//     innerList.innerHTML=total;
+//     var nr=742;
+//     var username="lucaXD";
+//     var stats=document.getElementById('stats');
+//     var date=new Date();
+//     var nrPbs=probList.length;
+//     if(stats!=null)
+//     {    
+//         stats.innerHTML="Numar de accesari: "+nr+"<br/>"+"Top user: "+username+"<br/>"+"Last access: "+date.toLocaleDateString("en-US")+"<br/>Numar probleme: "+nrPbs;
+
+//     }
+
+//     var solvedByMe=document.getElementById('solvedByMe');
+//     solvedByMe.innerHTML="<li>Numere prime</li><li>Dijkstra</li><li>Suma Gauss</li><li>...</li>"
+//     var greeting="Hello ";
+//     var uName=sessionStorage.getItem('user');
+//     var name=document.getElementById('myName');
+//     var nameOnProfile=document.getElementById('myNameProfile');
+//     if(uName!=null && name!=null)
+//     name.innerHTML=greeting+uName+" go to Profile!";
+//     if(nameOnProfile!=null)
+//     nameOnProfile.innerHTML="Profilul lui "+uName;
+
+// };
+
+window.onload = function(){
+
+  var greeting="Hello ";
+  var uName=sessionStorage.getItem('user');
+  var name=document.getElementById('myName');
+  var nameOnProfile=document.getElementById('myNameProfile');
+  if(uName!=null && name!=null)
+  name.innerHTML=greeting+uName+" go to Profile!";
+  if(nameOnProfile!=null)
+  nameOnProfile.innerHTML="Profilul lui "+uName;
+
+
+let xhr = new XMLHttpRequest();
+xhr.open("POST", "../php/problems.php");
+xhr.setRequestHeader("Accept", "application/json");
+xhr.setRequestHeader("Content-Type", "application/json");
+
+xhr.onreadystatechange = function () {
+
+    if (xhr.readyState === 4) {
+     //console.log(xhr.responseText);
+     var innerList = document.getElementsByClassName('listProblems')[0];
+     innerList.innerHTML=xhr.responseText;
+    }};
+  
+  const data = { 'type': sessionStorage.getItem('type')};
+  xhr.send(JSON.stringify(data));
+
+}
+
+
+ function goToProblem(id)
+ {
+    
+let xhr = new XMLHttpRequest();
+xhr.open("POST", "../php/goToProblem.php");
+xhr.setRequestHeader("Accept", "application/json");
+xhr.setRequestHeader("Content-Type", "application/json");
+xhr.onreadystatechange = function () {
+
+    if (xhr.readyState === 4) {
+        console.log(xhr.responseText);
+     sessionStorage.setItem('localProblem',xhr.responseText);
+     window.location="../html/solveMe.html";
+    }};
+  const data = { 'problemID': id};
+  xhr.send(JSON.stringify(data));
+ }

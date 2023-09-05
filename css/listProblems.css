@@ -1,0 +1,106 @@
+body
+{
+   background-image: url(../res/bottom.png);
+   background-repeat:repeat;
+}
+
+.plaque
+{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: nowrap;
+   align-items: stretch;
+   width: 100%;
+   margin-top: 0%;
+   gap: 0px;
+}
+.containerLastAdded
+{
+   margin-right: auto;
+   margin-left: auto;
+   margin-top: 2%;
+   display: flex;
+   align-content: space-evenly;
+   flex-direction: column;
+   gap: 10px;
+   padding: 20px;
+   width: 350px;
+   height: 600px;
+   border-radius: 5%;
+}
+
+.listProblems
+{
+   display: flex;
+   align-content: space-evenly;
+   flex-direction: column;
+   gap:35px;
+   width: 55%;
+   height: 600px;
+   
+   
+   margin-top: 2%;
+   margin-right: 5%;
+   margin-left: auto;
+   border-radius: 5%;
+   padding: 2%;
+   overflow-y:scroll;
+   box-shadow: 5px 5px 8px #bebebe96,
+   -5px -5px 8px #ffffff74;
+  
+}
+.listProblems::-webkit-scrollbar {
+   display: none;
+}
+
+
+@media screen and (max-width: 600px) {
+   .plaque
+   {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: center;
+      vertical-align: middle;
+      width: 100%;
+      margin-top: 0%;
+      gap: 10px;
+   }
+   
+.containerLastAdded
+{
+   margin-right: auto;
+   margin-left: auto;
+   margin-top: 2%;
+   display: flex;
+   
+   flex-direction: row;
+   align-content: space-evenly;
+   gap: 10px;
+   padding: 20px;
+   width: 100%;
+   height: 350px;
+   border-radius: 5%;
+}
+
+.listProblems
+{
+   display: flex;
+   align-content: space-evenly;
+   flex-direction: column;
+   gap:35px;
+   width: 90%;
+   height: 350px;
+   
+   
+   margin-top: 2%;
+   margin-right: 5%;
+   margin-left: auto;
+   border-radius: 5%;
+   padding: 2%;
+   overflow-y:scroll;
+   box-shadow: 5px 5px 8px #bebebe96,
+   -5px -5px 8px #ffffff74;
+  
+}
+}

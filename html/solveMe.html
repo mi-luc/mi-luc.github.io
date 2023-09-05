@@ -1,0 +1,83 @@
+<html>
+
+<head>
+
+    <title>Login</title>
+
+    <link rel="icon" href="../res/C.png">
+    <link href="../css/credentials.css" rel="stylesheet">
+    <link href="../css/solveMe.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">Be sharp at coding...</a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse1">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse1">
+                <div class="navbar-nav">
+                    <a href="./index.html" class="nav-item nav-link">Home</a>
+                    <a href="./login.html" class="nav-item nav-link">Login</a>
+                    <a href="./signup.html" class="nav-item nav-link">Signup</a>
+                    <a href="./profile.html" class="nav-item nav-link" id="myName"></a>
+
+                </div>
+                <form class="d-flex ms-auto">
+                    <input type="text" class="input-search" id="input-search" />
+                    <label class="search" for="input-search">
+                    </label>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container title" id="problemText">
+
+
+    </div>
+
+    <div class="container">
+        <br />
+        <br />
+        <h3>Rezolvare</h3>
+        <textarea placeholder="#include <stdio.h> //Start writing code :)" id="solution"></textarea>
+        <br />
+        <br />
+        <button type="submit" onclick="solvedProblem()">Solve</button>
+        <br />
+        <br />
+        <div class="littleBox" id="executedResult">Here will be your result</div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+    </div>
+
+    <!-- DO A README.md-->
+    <!-- POZE GALERIE-->
+
+
+
+    <script src="../js/solveMe.js"></script>
+
+    <footer class="bg-secondary text-center text-lg-start">
+        <!-- Copyright -->
+        <div class="text-center p-3">
+         Cea mai completa arhiva de probleme de programare!
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+</body>
+
+</html>

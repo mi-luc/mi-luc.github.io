@@ -1,0 +1,175 @@
+
+body{
+    background-image: url(../res/bottom.png);
+  
+    background-repeat:repeat;
+   
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.title
+{
+  
+    text-align: left;
+    font-weight: bold;
+    font-size: large;
+}
+h3
+{
+    margin-left: 25px;
+    color:rgb(238, 182, 78);
+    transition: 1s;
+}
+h3:hover
+{
+    color:black;
+}
+h1
+{
+    margin-left: 25px;
+    color:rgb(238, 182, 78);
+    transition: 1s;
+}
+h1:hover
+{
+    color:black;
+}
+h5
+{
+    margin-left: 25px;
+    color:rgb(238, 182, 78);
+    transition: 1s;
+}
+h5:hover
+{
+    color:black;
+}
+.container
+{
+    
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(210, 210, 210);
+    width:500px;
+   padding-bottom: 20px;
+ padding-right: 40px;
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+}
+
+.container2
+{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    vertical-align:middle;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(210, 210, 210);
+    width:1320px;
+    height: 900px;
+    padding-left: 50px;
+   padding-bottom: 20px;
+  
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+}
+p#textBox
+{
+    color: black;
+    text-align: justify;
+    font-weight:normal;
+    padding-left: 80px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-right: 80px;
+    font-size: medium;
+   
+}code {
+    font-family: Consolas,"courier new";
+    color: crimson;
+    background-color: #f1f1f1;
+    padding: 2px;
+    font-size: 155%;
+  }
+  .littleBox
+  {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    width: 90%;
+    margin-left: 5%;
+    background-color: rgb(235, 235, 235);
+    border-width: 1px;
+    font-size: 15;
+    font-weight: normal;
+
+    border-style: solid;
+
+    border-color: rgb(210, 210, 210);
+    border-radius: 7px;
+    padding: 5px;
+    padding-left: 15px;
+  }
+
+  textarea{
+
+    width: 800px;
+    height: 500px;
+    resize: none;
+    overflow: auto;
+  }
+
+  button
+  {
+    position:inherit;
+    margin-right: auto;
+    margin-left: auto;
+    width: 150px;
+    height: 40px;
+    background-color: orange;
+    color: white;
+    border-style: none;
+    transition: 1.5s;
+    margin-left: 200px;
+  }
+  button:hover
+  {
+    background-color: white;
+    color: orange;
+    }
+    textarea#add {
+        width: 750px;
+        height: 100px;
+    }
+
+    button#add {
+        margin-top: 25px;
+        margin-left: 70px;
+
+    }
+    
+@media screen and (max-width: 600px) {
+    textarea#add {
+        width: 250px;
+        height: 100px;
+    }
+body
+{
+    overflow-x: hidden;
+}
+textarea{
+
+    width: 300px;
+    height: 500px;
+    resize: none;
+    overflow: auto;
+  }
+
+}

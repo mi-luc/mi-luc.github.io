@@ -1,0 +1,14 @@
+
+window.onload = function(){
+    var greeting="Hello ";
+    var uName=sessionStorage.getItem('user');
+    var name=document.getElementById('myName');
+    var nameOnProfile=document.getElementById('myNameProfile');
+    if(uName!=null && name!=null)
+    name.innerHTML=greeting+uName+" go to Profile!";
+    if(nameOnProfile!=null)
+    nameOnProfile.innerHTML="Profilul lui "+uName;
+    
+     
+
+};

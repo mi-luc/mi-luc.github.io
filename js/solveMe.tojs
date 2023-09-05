@@ -1,0 +1,76 @@
+let probList = [
+    {
+      "title": "Test exercise",
+      "text": "Acest exercitiu este un test pentru a verifica uploadarea fisierelor...",
+      "date": new Date('2017-01-03'),
+      "id": 0,
+      "in":"",
+      "out":"",
+      "clasa":9,
+    },
+    {
+        "title": "Suma Gauss",
+        "text": "Se citește n număr natural. Calculați suma numerelor naturale mai mici sau egale cu n.",
+        "date": new Date('2017-01-03'),
+        "id": 1,
+        "in":"",
+        "out":"",
+        "clasa":9,
+    },
+    {
+        "title": "SumaPare",
+        "text": "Să se scrie un program care citește numărul natural n și determină suma 2+4+..+(2n).",
+        "date": new Date('2017-01-03'),
+        "id": 2,
+        "in":"",
+        "out":"",
+        "clasa":9,
+    },
+    {
+        "title": "Factorial",
+        "text": "Să se scrie un program care citește numărul natural n și determină valoarea lui n!=1*2*3*...*n.",
+        "date": new Date('2017-01-03'),
+        "id": 3,
+        "in":"",
+        "out":"",
+        "clasa":9,
+    },    
+]
+window.onload = function(){
+
+    // var greeting="Hello ";
+    // var uName=sessionStorage.getItem('user');
+    // var name=document.getElementById('myName');
+    // var nameOnProfile=document.getElementById('myNameProfile');
+    // if(uName!=null && name!=null)
+    // name.innerHTML=greeting+uName+" go to Profile!";
+    // if(nameOnProfile!=null)
+    // nameOnProfile.innerHTML="Profilul lui "+uName;
+    console.log("Hi")
+    var problemContainer = document.getElementById("problemText");
+    problemContainer.innerHTML=sessionStorage.getItem("localProblem");
+    //sessionStorage.removeItem("localProblem");
+
+};
+
+function solvedProblem()
+{
+   var solutionCode=document.getElementById("solution");
+
+let xhr = new XMLHttpRequest();
+xhr.open("POST", "../php/getSolutionExec.php");
+xhr.setRequestHeader("Accept", "application/json");
+xhr.setRequestHeader("Content-Type", "application/json");
+xhr.onreadystatechange = function () {
+
+    if (xhr.readyState === 4) {
+        console.log(xhr.responseText);
+        var status=xhr.responseText;
+        var insertCodeHere=document.getElementById("executedResult");
+        
+        insertCodeHere.innerHTML=xhr.responseText;
+    }};
+  const data = { 'solution': solutionCode.value};
+  console.log(data);
+  xhr.send(JSON.stringify(data));
+}

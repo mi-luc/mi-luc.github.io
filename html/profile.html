@@ -1,0 +1,111 @@
+<html>
+
+<head>
+
+    <title>My profile</title>
+    <link rel="icon" href="../res/C.png">
+    <link href="../css/credentials.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/b8b432d7d3.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../css/profile.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">Be sharp at coding...</a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse1">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse1">
+                <div class="navbar-nav">
+                    <a href="./index.html" class="nav-item nav-link">Home</a>
+                    <a href="./login.html" class="nav-item nav-link">Login</a>
+                    <a href="./signup.html" class="nav-item nav-link">Signup</a>
+                    <a href="./profile.html" class="nav-item nav-link" id="myNameProfile">Profile</a>
+                </div>
+                <form class="d-flex ms-auto">
+                    <input type="text" class="input-search" id="input-search" />
+                    <label class="search" for="input-search">
+                    </label>
+
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+
+        <div class="profile-card">
+            <div class="profile-header"><!-- profile header section -->
+                <div class="main-profile">
+
+                    <div class="profile-names">
+                        <h1 class="username">Username</h1>
+                        <small class="page-title">Utilizator normal</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-body"><!-- profile body section -->
+                <div class="profile-actions">
+                    <button class="follow" onclick="changePage()">Adauga problema (doar pentru admin)</button>
+                    <button class="message">Vezi probleme rezolvate</button>
+                    <section class="bio">
+                        <div class="bio-header">
+                            <i class="fa fa-info-circle"></i>
+                            Despre
+                        </div>
+                        <p class="bio-text">
+                            Informatii ce vor fi introduse ulterior din MySQL despre mine...
+                        </p>
+                    </section>
+                </div>
+
+
+                <div class="data">
+                    <div class="important-data">
+                        <section class="data-item">
+                            <h3 class="value">4</h3>
+                            <small class="title">Solved</small>
+                        </section>
+                        <section class="data-item">
+                            <h3 class="value">10</h3>
+                            <small class="title">Tried</small>
+                        </section>
+                        </section>
+                        <section class="data-item">
+                            <h3 class="value">4</h3>
+                            <small class="title">Comments</small>
+                        </section>
+                    </div>
+
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <footer class="bg-secondary text-center text-lg-start">
+        <!-- Copyright -->
+        <div class="text-center p-3">
+          Cea mai completa arhiva de probleme de programare!
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <script src="../js/index.js"></script>
+    <script src="../js/addProblem.js"></script>
+</body>
+
+</html>
